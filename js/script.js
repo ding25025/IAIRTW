@@ -1,11 +1,3 @@
-//
-//	jQuery Validate example script
-//
-//	Prepared by David Cochran
-//
-//	Free for your use -- No warranties, no guarantees!
-//
-
 
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
@@ -50,8 +42,14 @@ $(document).ready(function () {
     document.getElementById("getYear").innerHTML = year;
 });
 
-function finalCost() {
+function restartMarquee() {
+    var scrollingText = document.querySelector('.scrolling-text');
+    scrollingText.innerHTML += '<p>' + scrollingText.innerHTML + '</p>';
+}
 
+setTimeout(restartMarquee, 20000); // Restart after 10 seconds
+
+function finalCost() {
     var cat = document.getElementById("category").value;
     var qty = document.getElementById("qty").value;
 
